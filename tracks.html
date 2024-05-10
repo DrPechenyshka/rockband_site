@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Список треков</title>
+  </head>
+  <body>
+    <h1>Популярные треки</h1>
+    <ul>
+      {% for title in track_titles %}
+      <li>{{ title }}</li>
+      {% endfor %}
+    </ul>
+  </body>
+</html>
