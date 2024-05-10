@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Переадресация кнопок</title>
+    <style>
+      .button {
+        padding: 10px 20px;
+        font-size: 16px;
+        text-align: center;
+        cursor: pointer;
+        outline: none;
+        color: #fff;
+        background-color: #4caf50;
+        border: none;
+        border-radius: 15px;
+        box-shadow: 0 9px #999;
+        transition: background-color 0.3s, box-shadow 0.3s;
+      }
+
+      .button:hover {
+        background-color: #3e8e41;
+        box-shadow: 0 9px #666;
+      }
+
+      .button:active {
+        background-color: #333;
+        box-shadow: 0 5px #666;
+        transform: translateY(4px);
+      }
+    </style>
+  </head>
+  <body>
+    <button
+      class="button"
+      onclick="window.location.href='https://www.labrinth.com';"
+    >
+      Перейти на Labrinth
+    </button>
+    <button
+      class="button"
+      onclick="window.location.href='https://github.com/DrPechenyshka';"
+    >
+      Перейти на GitHub
+    </button>
+
+    <script>
+      // Добавление обработчиков событий для анимации кнопок
+      var buttons = document.querySelectorAll(".button");
+
+      buttons.forEach(function (button) {
+        button.addEventListener("mouseover", function () {
+          button.style.backgroundColor = "#555";
+        });
+
+        button.addEventListener("mouseout", function () {
+          button.style.backgroundColor = "#4CAF50";
+        });
+
+        button.addEventListener("mousedown", function () {
+          button.style.backgroundColor = "#333";
+          button.style.boxShadow = "0 5px #666";
+        });
+
+        button.addEventListener("mouseup", function () {
+          button.style.backgroundColor = "#4CAF50";
+          button.style.boxShadow = "0 9px #999";
+        });
+      });
+    </script>
+  </body>
+</html>
