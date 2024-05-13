@@ -6,7 +6,8 @@ app_by_import_v2 = Flask(__name__)
 def index():
     # Инициализация переменных для содержимого файлов
     contents = []
-    file_paths = ['C:\\rocksite\\content_items\\1.txt', 'C:\\rocksite\\content_items\\2.txt', 'C:\\rocksite\\content_items\\3.txt']
+    # Директория местоположения файлов с текстовой информацией пишется от их места расположения, пример: 'C:\\user\\folder\\file.txt'
+    file_paths = ['content_items\\1.txt', 'content_items\\2.txt', 'content_items\\3.txt']
     
     # Чтение текста из каждого файла
     for file_path in file_paths:
